@@ -33,12 +33,12 @@ const About = () => {
 
   return (
     <div id='about' className="w-full lg:px-[200px] px-8 lg:py-[100px] py-[40px] h-full flex flex-col justify-between bg-blue-950 items-start gap-[100px]">
-      <div className="lg:w-[40%] w-full flex flex-col justify-center items-start gap-6">
+      <div className="w-full flex flex-col justify-center items-start gap-6">
         <h2 data-aos="zoom-in" className="text-4xl uppercase text-white font-sans font-semibold">
           About me
         </h2>
         <div data-aos="zoom-in" className='bg-themered h-[3px] w-20'></div>
-        <p data-aos="zoom-in" data-aos-delay="400" className='text-gray-300 text-lg font-poppins'>
+        <p data-aos="zoom-in" data-aos-delay="400" className='text-gray-300 text-full font-poppins'>
           A highly motivated Computer Science Student specializing in Artificial Intelligence and Machine Learning. Passionate about Software Development Problem-solving, Machine learning. My Skills includes Python, C++, Data Structure, AIML. Seeking opportunities to apply and expand my technical skills in a professional setting.
         </p>
       </div>

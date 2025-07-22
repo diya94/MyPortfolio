@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body{
-    background-color: rgb(5, 23, 52);
+    background-color: #010026;
 }
 
 .overflow-hidden{

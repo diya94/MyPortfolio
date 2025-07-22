@@ -58,7 +58,7 @@ const Footer = () => {
       </div>
 
       <p className='text-gray-300 text-[15px] text-center font-poppins leading-8'>
-        © 2025 Inframe, All Rights Reserved
+        Copyright 2025, All Rights Reserved
       </p>
 
       <div id='icon-box' className='bg-gray-300 text-white p-1 rounded-full hover:bg-slate-500 hover:text-themeblack cursor-pointer fixed bottom-4 right-4'>

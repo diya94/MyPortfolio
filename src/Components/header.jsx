@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const menuLinks = [
     { name: 'Home', to: 'scroll' },
@@ -15,21 +16,27 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
+   const handleScroll = () => {
+    setScrolled(window.scrollY > 20);
+  };
+
+   window.addEventListener('scroll', handleScroll);
+   return () => window.removeEventListener('scroll', handleScroll);
+  
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle('overflow-hidden', menuOpen);
+    return () => document.body.classList.remove('overflow-hidden');
   }, [menuOpen]);
 
   return (
-    <header className="bg-themeblack py-4 px-7 lg:px-[100px] fixed top-0 left-0 w-full z-50">
+    <header className={`fixed top-0 left-0 w-full z-50 py-4 px-7 lg:px-[100px] transition-colors duration-500 ${
+        scrolled ? 'bg-pink-900' : 'bg-transparent'
+      }`}>
       <div className="flex justify-between items-start">
         <div className="font-bold text-white text-2xl">
-          DIYA KARMAKAR <span className="text-blue-500">.</span>
+          DIYA KARMAKAR <span className="text-blue-800">.</span>
         </div>
 
         <button
