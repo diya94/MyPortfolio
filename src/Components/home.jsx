@@ -31,7 +31,7 @@ const Home = () => {
         </p>
 
         <a
-          href="/Diya_Resume.pdf"
+          href="/Diya/Karmakar/Resume.pdf"
           download
           data-aos="zoom-in"
           data-aos-delay="400"
